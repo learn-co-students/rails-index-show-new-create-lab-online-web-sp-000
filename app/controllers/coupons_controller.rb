@@ -4,6 +4,7 @@ class CouponsController < ApplicationController
   end
 
   def create
+    # blah
   end
   
 end
