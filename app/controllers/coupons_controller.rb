@@ -4,7 +4,8 @@ class CouponsController < ApplicationController
   end
 
   def create
-    # blah
+    @coupon = Coupon.create()
+    redirect_to coupon_path(@coupon)
   end
   
 end
