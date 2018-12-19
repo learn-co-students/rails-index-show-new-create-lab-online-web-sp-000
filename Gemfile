@@ -40,4 +40,6 @@ group :development, :test do
   gem 'capybara'
   # gem 'capybara-rails'
   gem 'database_cleaner'
+  # gem 'pry'
+  # gem 'pry-nav'
 end

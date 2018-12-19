@@ -5,9 +5,15 @@ class CouponsController < ApplicationController
   end
 
   def new; end
+  
+  def show
+    @coupon = Coupon.find(params[:id])
+    # binding.pry
+  end
 
   def create
-    @coupon = Coupon.create()
+    # raise params.inspect
+    @coupon = Coupon.create(coupon_code: params[:coupon][:coupon_code], store: params[:coupon][:store])
     redirect_to coupon_path(@coupon)
   end
   
