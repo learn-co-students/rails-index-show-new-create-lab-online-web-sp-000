@@ -9,4 +9,3 @@
 
     Coupon.create(coupon_code: 'BUYMORE', store: 'Fresh Direct')
     Coupon.create(coupon_code: 'SAVE', store: 'Gap')
-    
