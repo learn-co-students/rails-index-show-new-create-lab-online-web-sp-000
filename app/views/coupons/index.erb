@@ -1,0 +1,11 @@
+<h1>Coupons INdex</h1>
+
+<% @coupons.each do |coupon| %>
+    <ul>
+        <li>
+            Store: <%= coupon.store %><br>
+            Code: <%= link_to coupon.coupon_code, coupon_path(coupon) %><br>
+            created at: <%= coupon.created_at %>
+        </li>
+    </ul>
+<% end %>
