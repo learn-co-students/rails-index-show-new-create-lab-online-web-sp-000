@@ -1,0 +1,10 @@
+<h1>All Coupons</h1>
+<% if @coupons.count == 0 %>
+    <h2>There are currently no coupons</h2>
+<% else %>
+    <ol>
+        <% @coupons.each do |c| %>
+            <li><%= link_to c.coupon_code, coupon_path(c) %> - <%=c.store %></li>
+        <% end %>
+    </ol>
+<% end %>
