@@ -1,2 +1,8 @@
-<h1>Coupons#index</h1>
-<p>Find me in app/views/coupons/index.html.erb</p>
+<h2>Coupons</h2>
+
+<% @coupons.each do |coupon| %>
+  <%= content_tag(:div, coupon, class: "container") do %>
+    <%= content_tag(:p, "#{coupon.coupon_code}: #{coupon.store}") %>
+  <% end %>
+<% end %>
+
