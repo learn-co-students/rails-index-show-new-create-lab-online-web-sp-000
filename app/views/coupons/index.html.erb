@@ -1,8 +1,13 @@
 <h2>Coupons</h2>
 
 <% @coupons.each do |coupon| %>
-  <%= content_tag(:div, coupon, class: "container") do %>
-    <%= content_tag(:p, "#{coupon.coupon_code}: #{coupon.store}") %>
-  <% end %>
+  <div class="container">
+    <label>Coupon Code:</label>
+    <%= link_to coupon.coupon_code, coupon_path(coupon) %>
+    <label>- Coupon Store:</label>
+    <%= link_to coupon.store, coupon_path(coupon) %>
+
+  </div>
+
 <% end %>
 
