@@ -1,0 +1,8 @@
+<%= content_tag :h2, 'Coupons' %>
+
+<%= content_tag :ul do %>
+  <% @coupons.each do |coupon| %>
+    <%= content_tag :h3, coupon.store %>
+    <%= link_to coupon.coupon_code, coupon_path(coupon) %>
+  <% end %>
+<% end %>
