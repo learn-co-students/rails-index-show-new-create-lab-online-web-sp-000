@@ -1,0 +1,7 @@
+<% i = 1 %>
+<h1>Coupons Page</h1>
+<% @coupons.each do |coupon| %>
+  <%= link_to "Coupon #{i}", coupon_path(coupon.id) %>
+  <% i+=1 %>
+<% end %>
+
