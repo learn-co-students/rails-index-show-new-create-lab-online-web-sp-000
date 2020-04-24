@@ -1,0 +1,12 @@
+<h1>Coupon Form</h1>
+<%= form_tag coupons_path do %>
+<!-- coupons_path is a POST path that directly correlates with coupons#create
+when you attach create as resource in routes, it autogenerates helper routes for POST to index-->
+  <label>Coupon Code:</label><br>
+  <%= text_field_tag :"coupon[coupon_code]" %><br>
+
+  <label>Store:</label><br>
+  <%= text_field_tag :"coupon[store]" %><br>
+
+  <%= submit_tag "Submit Coupon" %>
+<% end %>
