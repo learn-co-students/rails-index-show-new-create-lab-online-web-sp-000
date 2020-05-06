@@ -1,7 +1,4 @@
-class CouponController < ApplicationController
-
-  def new
-  end
+class CouponsController < ApplicationController
 
   def index
     @coupons = Coupon.all
@@ -9,6 +6,9 @@ class CouponController < ApplicationController
 
   def show
     @coupon = Coupon.find(params[:id])
+  end
+
+  def new
   end
 
   def create
