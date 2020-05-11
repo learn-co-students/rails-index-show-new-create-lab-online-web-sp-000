@@ -28,6 +28,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Unicorn as the app server
 # gem 'unicorn'
+gem 'pry'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -39,4 +40,5 @@ group :development, :test do
   gem "factory_bot_rails"
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'shotgun'
 end
