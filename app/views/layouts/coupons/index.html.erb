@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>All Coupons</title>
+
+<% @coupons.each do |coupon| %>
+    <%= link_to "#{coupon.store} #{coupon.coupon_code}", coupon_path(coupon)%>
+    <% end %>
+</head>
+</html>
