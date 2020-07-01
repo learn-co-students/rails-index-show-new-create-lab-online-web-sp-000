@@ -4,7 +4,6 @@ class CouponsController < ApplicationController
   end
 
   def show
-    # @coupon = Coupon.last
     if params[:id]
       @coupon = Coupon.find(params[:id])
     end
