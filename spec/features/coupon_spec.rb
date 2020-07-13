@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 describe 'Route to view' do
   it 'has an index page' do
     visit coupons_path
