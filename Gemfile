@@ -6,7 +6,7 @@ gem 'rails', '5.0.7.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~>1.3.6'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+# gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -38,5 +38,8 @@ group :development, :test do
   gem 'rspec-rails','>= 3.5.2'
   gem "factory_bot_rails"
   gem 'capybara'
+  # gem 'capybara-rails'
   gem 'database_cleaner'
+  # gem 'pry'
+  # gem 'pry-nav'
 end
