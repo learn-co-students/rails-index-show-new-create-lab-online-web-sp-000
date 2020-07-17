@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Coupon.create(coupon_code: "ASD133", store: "Chipotle")
+Coupon.create(coupon_code: "ASD103", store: "Chipotle")
+Coupon.create(coupon_code: "ASDx23", store: "Chipotle")
+Coupon.create(coupon_code: "ASD523", store: "Chipotle")
+Coupon.create(coupon_code: "ASD12c", store: "Chipotle")
+Coupon.create(coupon_code: "ASD12g", store: "Chipotle")
+Coupon.create(coupon_code: "ASD1f3", store: "Chipotle")
