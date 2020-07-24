@@ -12,11 +12,11 @@
 
 ActiveRecord::Schema.define(version: 20200724211146) do
 
-  create_table "cupons", force: :cascade do |t|
-    t.string   "cupon_code", null: false
-    t.string   "store",      null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "coupons", force: :cascade do |t|
+    t.string   "coupon_code"
+    t.string   "store"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end
