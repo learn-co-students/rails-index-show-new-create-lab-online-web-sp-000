@@ -1,0 +1,6 @@
+<% @coupon.map do |c| %>
+    <%= c.store %>
+    <%= link_to c.coupon_code, coupon_path(c) %>
+<% end %>
+
+<!-- link_to post.title, post_path(post.id) -->
