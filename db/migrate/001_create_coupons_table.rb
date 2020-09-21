@@ -7,4 +7,4 @@ class CreateCouponsTable < ActiveRecord::Migration
       end
     end
 
-  end
+end

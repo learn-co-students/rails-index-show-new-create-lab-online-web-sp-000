@@ -1,4 +1,4 @@
-class CouponsContoller < ApplicationController
+class CouponsController < ApplicationController
 
   def index
     @coupons = Coupon.all
@@ -9,13 +9,13 @@ class CouponsContoller < ApplicationController
   end
 
   def new
-    @coupon = Coupon.new
+    # @coupon = Coupon.new
   end
 
   def create
     @coupon = Coupon.new
-    @coupon.coupon =  params[:coupon_code]
-    @coupon.store =  params[:store]
+    @coupon[:coupon_code] =  params[:coupon][:coupon_code]
+    @coupon[:store] =  params[:coupon][:store]
     @coupon.save
     redirect_to coupon_path(@coupon)
   end
