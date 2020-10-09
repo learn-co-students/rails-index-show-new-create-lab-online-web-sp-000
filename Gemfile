@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'sinatra'
+
+gem 'rake'
+gem 'thin'
+gem 'require_all'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.0.7.1'
