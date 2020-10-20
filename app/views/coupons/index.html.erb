@@ -1,0 +1,7 @@
+<h2>Coupons</h3>
+<ol>
+<% @coupons.each do |c| %>
+    <%= content_tag(:li, c.store + ": ") %><br> 
+    <%= link_to(c.coupon_code, coupon_path(c)) %>
+<% end %>
+</ol>
