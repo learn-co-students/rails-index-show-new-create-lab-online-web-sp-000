@@ -9,6 +9,7 @@ describe CouponsController do
           post :create, params: { :coupon => { :coupon_code => "ASD123", :store => "Dean and Deluca" } }
         }.to change(Coupon,:count).by(1)
       end
+    
 
       it "redirects to the new coupon" do
         post :create, params: { :coupon => { :coupon_code => "ASD123", :store => "Dean and Deluca" } }
