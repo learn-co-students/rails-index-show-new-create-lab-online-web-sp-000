@@ -1,3 +1,0 @@
-class CouponController < ApplicationController
-    
-end
