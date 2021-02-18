@@ -14,7 +14,7 @@ describe 'Multiple coupons are shown' do
     visit coupons_path
     expect(page).to have_content(/Chipotle|Jamba/)
   end
-end
+end 
 
 describe 'form page' do
   it 'form renders with the new action' do

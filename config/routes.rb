@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   # Example resource route with options:
   #   resources :products do
-  #     member do
+  #     member do 
   #       get 'short'
   #       post 'toggle'
   #     end
@@ -53,4 +53,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+  resources :coupons, only: [:index,:show, :new, :create]
+end 
