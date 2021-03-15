@@ -13,3 +13,10 @@ module Isncl
     # -- all .rb files in that directory are automatically loaded.
   end
 end
+
+module Testing
+  class Application < Rails::Application
+    # ...
+    config.generators.test_framework false
+  end
+end
