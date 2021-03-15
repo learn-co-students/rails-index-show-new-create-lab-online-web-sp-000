@@ -1,7 +1,7 @@
 class CouponsController < ApplicationController
   before_action :find_coupon, only: [:show]
   def index
-    @coupon = Coupon.all
+    @coupons = Coupon.all
   end
 
   def show
