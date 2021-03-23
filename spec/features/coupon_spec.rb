@@ -22,8 +22,8 @@ describe 'form page' do
     expect(page).to have_content("Coupon Form")
   end
 
-  it 'new form submits content and renders form content' do
-    visit new_coupon_path
+ it 'new form submits content and renders form content' do
+   visit new_coupon_path
 
     fill_in 'coupon[coupon_code]', with: "YAYFREE"
     fill_in 'coupon[store]', with: "Hobby Lobby"
@@ -41,7 +41,7 @@ describe 'form page' do
 
     click_on "Submit Coupon"
 
-    expect(Coupon.last.store).to eq("Quip")
+   expect(Coupon.last.store).to eq("Quip")
   end
 end
 
@@ -73,3 +73,5 @@ describe 'linking from the index page to the show page' do
     expect(page).to have_link(linked_coupon.coupon_code, href: coupon_path(linked_coupon))
   end
 end
+
+

@@ -16,7 +16,7 @@ class CouponsController < ApplicationController
     @coupon= Coupon.create(coupon_code: params[:coupon_code], store: params[:store])
     
     if @coupon.save
-      redirect_to coupon_path(@coupon)
+      redirect_to coupons_path(@coupon)
     else 
       render :new
     end 
