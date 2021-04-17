@@ -9,8 +9,8 @@ end
 
 describe 'Multiple coupons are shown' do
   it 'on the index page' do
-    Coupon.create(coupon_code: "ASD123", store: "Chipotle")
-    Coupon.create(coupon_code: "XYZ098", store: "Jamba")
+    Coupon.create(coupon_code: "ASD123", store_name: "Chipotle")
+    Coupon.create(coupon_code: "XYZ098", store_name: "Jamba")
     visit coupons_path
     expect(page).to have_content(/Chipotle|Jamba/)
   end
@@ -26,7 +26,7 @@ describe 'form page' do
     visit new_coupon_path
 
     fill_in 'coupon[coupon_code]', with: "YAYFREE"
-    fill_in 'coupon[store]', with: "Hobby Lobby"
+    fill_in 'coupon[store_name]', with: "Hobby Lobby"
 
     click_on "Submit Coupon"
 
@@ -37,17 +37,17 @@ describe 'form page' do
     visit new_coupon_path
 
     fill_in 'coupon[coupon_code]', with: "FREEITEM"
-    fill_in 'coupon[store]', with: "Quip"
+    fill_in 'coupon[store_name]', with: "Quip"
 
     click_on "Submit Coupon"
 
-    expect(Coupon.last.store).to eq("Quip")
+    expect(Coupon.last.store_name).to eq("Quip")
   end
 end
 
 describe 'Show page' do
   before do
-    @coupon = Coupon.create(coupon_code: "FREESTUFF", store: "Chipotle")
+    @coupon = Coupon.create(coupon_code: "FREESTUFF", store_name: "Chipotle")
   end
 
   it 'renders properly' do
@@ -68,7 +68,7 @@ end
 
 describe 'linking from the index page to the show page' do
   it 'index page coupon code text is hyperlinked to coupon page' do
-    linked_coupon = Coupon.create(coupon_code: "FREESTUFF", store: "Chipotle")
+    linked_coupon = Coupon.create(coupon_code: "FREESTUFF", store_name: "Chipotle")
     visit coupons_path
     expect(page).to have_link(linked_coupon.coupon_code, href: coupon_path(linked_coupon))
   end
